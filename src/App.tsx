@@ -5,6 +5,8 @@ import {applyMiddleware, compose, createStore} from "redux";
 import {rootSagas} from "./store/RootSaga";
 import rootReducer from "./store/RootReducer";
 import {Routes} from "./Routes";
+import './i18n';
+import {GlobalStyle} from "./styles/global";
 
 export default function() {
   const sagaMiddleware = createSagaMiddleware();
@@ -12,6 +14,7 @@ export default function() {
   sagaMiddleware.run(rootSagas);
   return (
       <Provider store={store}>
+          <GlobalStyle/>
           <Routes/>
       </Provider>
   );

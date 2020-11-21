@@ -16,7 +16,8 @@ interface SelectProps {
     disabled?: boolean;
     name?: string;
     value?: Array<ValueType> | ValueType;
-    onChange?: any;
+    defaultValue?: Array<ValueType> | ValueType;
+    onChange: (e: ValueType | any) => void;
     options?: Array<ValueType>;
     stylesConfig?: StylesConfig;
     label?: string;
@@ -31,6 +32,7 @@ export const ReactSelect: React.FC<SelectProps> =  React.memo((props: SelectProp
             stylesConfig,
             value,
             label,
+            defaultValue
         } = props;
         const selectStyles = stylesConfig || BaseSelectStyles;
     return (
@@ -41,6 +43,7 @@ export const ReactSelect: React.FC<SelectProps> =  React.memo((props: SelectProp
                     isDisabled={disabled}
                     isSearchable={true}
                     value={value}
+                    defaultValue={defaultValue}
                     onChange={onChange}
                     options={options}
                     placeholder={placeholder}

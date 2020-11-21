@@ -1,19 +1,20 @@
 import { AnyAction } from "redux";
-import {SET_COUNTRIES, SET_GEO_INFO, SET_HISTORY_LIST, SET_WEATHER, WeatherState} from "./types";
+import {SET_COUNTRIES, SET_GEO_INFO, SET_STATUS, SET_WEATHER, WeatherState} from "./types";
+import {AsyncStatus} from "../../types/enums";
 
 const initialState: WeatherState = {
-    list: [],
+    weatherList: [],
     countries: [],
-    geo: {},
-    history: []
+    geo: {country_name: ''},
+    status: AsyncStatus.Idle
 };
 
-export const weatherReducer = (state: any= initialState, action: AnyAction) => {
+export const weatherReducer = (state: WeatherState = initialState, action: AnyAction) => {
     switch (action.type) {
         case SET_WEATHER:
             return {
                 ...state,
-                list: action.data
+                weatherList: action.data
             };
             case SET_COUNTRIES:
             return {
@@ -25,10 +26,10 @@ export const weatherReducer = (state: any= initialState, action: AnyAction) => {
                 ...state,
                 geo: action.info
             };
-            case SET_HISTORY_LIST:
+            case SET_STATUS:
             return {
                 ...state,
-                history: state.history.concat(action.data)
+                status: action.status
             };
         default:
             return state;

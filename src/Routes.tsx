@@ -1,28 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
-import { renderRoutes } from 'react-router-config';
+import {BrowserRouter as Router, Switch} from 'react-router-dom';
+import {renderRoutes} from 'react-router-config';
 import {HomeScene} from "./scenes/home";
+import {HistoryScene} from "./scenes/history";
+import {Layout} from "./components/Layout";
 
-interface State {
-
-}
-
-interface Props {
-}
-
-export class Routes extends React.Component<Props, State> {
+export class Routes extends React.Component {
 
     render() {
         const routes = [
             {
                 exact: true,
                 path: '/',
-                component: (props: any) => <HomeScene {...props}/>,
+                component: () => <HomeScene/>,
             },
             {
                 exact: true,
                 path: '/history',
-                component: (props: any) => <div {...props}>history page</div>,
+                component: () => <HistoryScene />,
             },
             {
                 path: '**',
@@ -31,7 +26,9 @@ export class Routes extends React.Component<Props, State> {
         ];
         return (
             <Router>
-                <Switch>{renderRoutes(routes)}</Switch>
+                <Layout>
+                    <Switch>{renderRoutes(routes)}</Switch>
+                </Layout>
             </Router>
         );
     }
