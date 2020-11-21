@@ -10,7 +10,7 @@ const baseOptions: StyleObject = {
     container: provided => {
         return {
             ...provided,
-            width: '100%'
+            width: '100%',
         };
     },
     control: provided => {
@@ -28,8 +28,8 @@ const baseOptions: StyleObject = {
             minHeight: '33px',
             height: '100%',
             ':hover': {
-                boxShadow: 'none'
-            }
+                boxShadow: 'none',
+            },
         };
     },
     multiValue: (provided) => {
@@ -48,9 +48,9 @@ const baseOptions: StyleObject = {
                 color: 'white',
                 position: 'relative',
                 'svg': {
-                    display: 'none'
+                    display: 'none',
                 },
-                ':after' : {
+                ':after': {
                     content: `""`,
                     position: 'absolute',
                     width: '7px',
@@ -58,7 +58,7 @@ const baseOptions: StyleObject = {
                     top: 5,
                     right: 5,
                     mask: `url('/static/image/close_icon.svg') no-repeat center`,
-                    background: '#fff'
+                    background: '#fff',
                 },
             },
             'div:first-of-type': {
@@ -68,15 +68,15 @@ const baseOptions: StyleObject = {
                 fontWeight: 500,
                 fontSize: '14px',
                 color: '#131C44',
-            }
-        }
+            },
+        };
     },
     menuList: provided => {
         return {
             ...provided,
             maxHeight: '200px',
             overflowY: 'auto',
-            '&::-webkit-scrollbar': {width: '4px'},
+            '&::-webkit-scrollbar': { width: '4px' },
 
             '&::-webkit-scrollbar-track': {
                 borderRadius: '',
@@ -89,7 +89,7 @@ const baseOptions: StyleObject = {
                 borderRadius: '4px',
                 marginTop: '4px',
                 marginBottom: '4px',
-            }
+            },
         };
     },
     option: (provided, state) => {
@@ -108,7 +108,7 @@ const baseOptions: StyleObject = {
             cursor: 'pointer',
             backgroundColor: state.isSelected ? '#2E9CDB' : 'transparent',
             color: state.isSelected ? '#fff' : '#333',
-            '&:hover': {backgroundColor: state.isSelected ? '#2E9CDB' : 'rgb(242, 242, 242)'},
+            '&:hover': { backgroundColor: state.isSelected ? '#2E9CDB' : 'rgb(242, 242, 242)' },
         };
     },
     singleValue: provided => {
@@ -143,8 +143,8 @@ const baseOptions: StyleObject = {
                 color: '#2E9CDB',
                 ':hover': {
                     color: '#2E9CDB',
-                }
-            }
+                },
+            },
         };
     },
     dropdownIndicator: (provided, state) => ({
@@ -161,7 +161,7 @@ const baseOptions: StyleObject = {
         fontFamily: 'Inter, sans-serif',
         fontWeight: 500,
     }),
-    indicatorSeparator: () => ({display: 'none'}),
+    indicatorSeparator: () => ({ display: 'none' }),
 };
 
 export const BaseSelectStyles: StyleObject = {

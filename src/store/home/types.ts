@@ -1,9 +1,9 @@
-import {ValueType} from "../../components/ReactSelect";
-import {AsyncStatus} from "../../types/enums";
+import { ValueType } from '../../components/ReactSelect';
+import { AsyncStatus } from '../../types/enums';
 
 export interface WeatherState {
-    weatherList: Array<DayProps>;
-    countries: Array<ValueType>;
+    weatherList: DayProps[];
+    countries: ValueType[];
     geo: GeoProps;
     status: AsyncStatus
 }
@@ -21,7 +21,7 @@ export interface WeatherProps {
 export interface DayProps {
     dt_txt: string;
     main: { temp: number; }
-    weather: Array<WeatherProps>
+    weather: WeatherProps[]
 }
 
 export const SET_STATUS = 'home/SET_STATUS';

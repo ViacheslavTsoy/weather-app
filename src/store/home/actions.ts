@@ -5,35 +5,35 @@ import {
     SET_COUNTRIES,
     GET_GEO_INFO,
     SET_GEO_INFO,
-    SET_STATUS, DayProps, GeoProps
-} from "./types";
-import {AsyncStatus} from "../../types/enums";
-import {ValueType} from "../../components/ReactSelect";
+    SET_STATUS, DayProps, GeoProps,
+} from './types';
+import { AsyncStatus } from '../../types/enums';
+import { ValueType } from '../../components/ReactSelect';
 
-export function getWeather(params: {[key: string]: string}) {
-    return {type: GET_WEATHER, params}
+export function getWeather(params: { [key: string]: string }) {
+    return { type: GET_WEATHER, params };
 }
 
-export function setWeather(data: Array<DayProps>) {
-    return {type: SET_WEATHER, data}
+export function setWeather(data: DayProps[]) {
+    return { type: SET_WEATHER, data };
 }
 
 export function getCountries() {
-    return {type: GET_COUNTRIES}
+    return { type: GET_COUNTRIES };
 }
 
-export function setCountries(data: Array<ValueType>) {
-    return {type: SET_COUNTRIES, data}
+export function setCountries(data: ValueType[]) {
+    return { type: SET_COUNTRIES, data };
 }
 
 export function getGeoInfo() {
-    return {type: GET_GEO_INFO}
+    return { type: GET_GEO_INFO };
 }
 
 export function setGeoInfo(info: GeoProps) {
-    return {type: SET_GEO_INFO, info}
+    return { type: SET_GEO_INFO, info };
 }
 
 export function setStatus(status: AsyncStatus) {
-    return {type: SET_STATUS, status}
+    return { type: SET_STATUS, status };
 }

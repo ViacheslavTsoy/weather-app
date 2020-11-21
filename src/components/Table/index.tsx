@@ -1,10 +1,10 @@
 import React from 'react';
-import styled from "styled-components";
-import {Box} from "../basic";
-import ReactTable from "react-table";
-import 'react-table/react-table.css'
-import {theme} from "../../styles/theme";
-import {useTranslation} from "react-i18next";
+import styled from 'styled-components';
+import { Box } from '../basic';
+import ReactTable from 'react-table';
+import 'react-table/react-table.css';
+import { theme } from '../../styles/theme';
+import { useTranslation } from 'react-i18next';
 
 export type TableProps = {
     data: Array<{}>;
@@ -12,14 +12,14 @@ export type TableProps = {
     onRowClick?: (id: string) => void;
 };
 
-export function Table({data, columns}: TableProps) {
-    const {t} = useTranslation();
+export function Table({ data, columns }: TableProps) {
+    const { t } = useTranslation();
     const translations = {
         previousText: t('tablePrev'),
         nextText: t('tableNext'),
         noDataText: t('tableEmpty'),
         pageText: t('tablePage'),
-        ofText: t('tableOf')
+        ofText: t('tableOf'),
     };
     return (
         <TableWrapper>
@@ -52,6 +52,10 @@ border-right: 0;
 .ReactTable {
 width: 100%;
 padding: 29px 17px;
+background: ${theme.colors.white};
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
 }
 .rt-thead {
 box-shadow: none !important;

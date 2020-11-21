@@ -1,7 +1,7 @@
-import * as React from 'react';
-import styled from "styled-components";
-import {BaseSyntheticEvent} from "react";
-import {theme} from "../../../styles/theme";
+import React from 'react';
+import styled from 'styled-components';
+import { BaseSyntheticEvent } from 'react';
+import { theme } from '../../../styles/theme';
 
 type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     label?: string;
@@ -10,7 +10,7 @@ type Props = React.InputHTMLAttributes<HTMLInputElement> & {
     onChange: (e: BaseSyntheticEvent) => void
 };
 
-export const Input: React.FC<Props> = React.memo(({label, onChange, value, type, ...props}) => {
+export const Input: React.FC<Props> = React.memo(({ label, onChange, value, type, ...props }) => {
     return (
         <InputContainer>
             {label && <LabelInput>{label}</LabelInput>}
@@ -18,7 +18,7 @@ export const Input: React.FC<Props> = React.memo(({label, onChange, value, type,
                 {...props}
                 value={value}
                 type={type}
-                autoComplete='off'
+                autoComplete="off"
             />
         </InputContainer>
     );

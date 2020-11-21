@@ -1,9 +1,9 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch} from 'react-router-dom';
-import {renderRoutes} from 'react-router-config';
-import {HomeScene} from "./scenes/home";
-import {HistoryScene} from "./scenes/history";
-import {Layout} from "./components/Layout";
+import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import { HomeScene } from './scenes/home';
+import { HistoryScene } from './scenes/history';
+import { Layout } from './components/Layout';
 
 export class Routes extends React.Component {
 
@@ -17,7 +17,7 @@ export class Routes extends React.Component {
             {
                 exact: true,
                 path: '/history',
-                component: () => <HistoryScene />,
+                component: () => <HistoryScene/>,
             },
             {
                 path: '**',

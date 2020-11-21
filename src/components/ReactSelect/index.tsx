@@ -1,9 +1,9 @@
-import React, {ReactNode} from 'react';
-import Select, {StylesConfig} from 'react-select';
+import React, { ReactNode } from 'react';
+import Select, { StylesConfig } from 'react-select';
 import styled from 'styled-components';
-import {BaseSelectStyles} from "./select-base-styles";
-import {theme} from "../../styles/theme";
-import {Box} from "../basic";
+import { BaseSelectStyles } from './select-base-styles';
+import { theme } from '../../styles/theme';
+import { Box } from '../basic';
 
 export interface ValueType {
     value: string;
@@ -15,15 +15,15 @@ interface SelectProps {
     placeholder?: string;
     disabled?: boolean;
     name?: string;
-    value?: Array<ValueType> | ValueType;
-    defaultValue?: Array<ValueType> | ValueType;
+    value?: ValueType[] | ValueType;
+    defaultValue?: ValueType[] | ValueType;
     onChange: (e: ValueType | any) => void;
-    options?: Array<ValueType>;
+    options?: ValueType[];
     stylesConfig?: StylesConfig;
     label?: string;
 }
 
-export const ReactSelect: React.FC<SelectProps> =  React.memo((props: SelectProps) => {
+export const ReactSelect: React.FC<SelectProps> = React.memo((props: SelectProps) => {
         const {
             disabled,
             onChange,
@@ -32,10 +32,10 @@ export const ReactSelect: React.FC<SelectProps> =  React.memo((props: SelectProp
             stylesConfig,
             value,
             label,
-            defaultValue
+            defaultValue,
         } = props;
         const selectStyles = stylesConfig || BaseSelectStyles;
-    return (
+        return (
             <SelectContainer>
                 {label && <Label>{label}</Label>}
                 <Select
@@ -53,10 +53,10 @@ export const ReactSelect: React.FC<SelectProps> =  React.memo((props: SelectProp
                 />
             </SelectContainer>
         );
-    }
-)
+    },
+);
 
-const Label= styled.div`
+const Label = styled.div`
     font-style: normal;
     font-weight: normal;
     margin-bottom: 8px;

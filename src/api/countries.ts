@@ -1,4 +1,4 @@
-import {Api} from "./index";
+import {Api} from './index';
 
 export const countriesApi = {
    get() {
@@ -6,5 +6,5 @@ export const countriesApi = {
    },
     getGeoInfo() {
        return Api.get('https://ipapi.co/json/')
-    }
+    },
 };
