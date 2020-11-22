@@ -12,18 +12,14 @@ export const Title = styled(TitleConstructor)`
       props.withHover &&
       css`
         &:hover {
-          ${props.hoverColor && `color: ${props.hoverColor};`}
-          opacity: 0.8;
+          ${props.hoverColor && `color: ${props.hoverColor};`};
+          opacity: .8;
         }
 
         &:active {
-          opacity: 0.6;
+          opacity: .6;
         }
       `
     }
   `}
 `;
-
-Title.defaultProps = {
-  zIndex: 4,
-};

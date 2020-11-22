@@ -10,43 +10,27 @@ import styled from 'styled-components';
 export const HistoryScene: React.FC = React.memo(() => {
     const { list } = useSelector((state: RootState) => state.history);
     const { t } = useTranslation();
-    const ProductsColumns = React.useMemo(() => [
+    const HistoryColumns = React.useMemo(() => [
             {
-                Header: () => {
-                    return (
-                        <div>{t('columnCountry')}</div>
-                    );
-                },
+                Header: () => t('columnCountry'),
                 minWidth: 205,
                 sortable: false,
                 accessor: 'city',
             },
             {
-                Header: () => {
-                    return (
-                        <div>{t('columnDate')}</div>
-                    );
-                },
+                Header: () => t('columnDate'),
                 minWidth: 205,
                 sortable: true,
                 accessor: 'date',
             },
             {
-                Header: () => {
-                    return (
-                        <div>{t('columnTemp')}</div>
-                    );
-                },
+                Header: () => t('columnTemp'),
                 minWidth: 205,
                 sortable: false,
                 accessor: 'temp',
             },
             {
-                Header: () => {
-                    return (
-                        <div>{t('columnDescription')}</div>
-                    );
-                },
+                Header: () => t('columnDescription'),
                 minWidth: 205,
                 sortable: false,
                 accessor: 'description',
@@ -58,7 +42,7 @@ export const HistoryScene: React.FC = React.memo(() => {
         <HistoryWrapper>
             <NavLink to={'/'}>{`< Back`}</NavLink>
             <MainTitle>{t('historyTitle')}</MainTitle>
-            <Table columns={ProductsColumns} data={list}/>
+            <Table columns={HistoryColumns} data={list}/>
         </HistoryWrapper>
     );
 });

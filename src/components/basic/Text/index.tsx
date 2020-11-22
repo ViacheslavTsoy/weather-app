@@ -17,13 +17,9 @@ export const Text = styled(TextConstructor)`
         }
 
         &:active {
-          opacity: 0.6;
+          opacity: .6;
         }
       `
     }
   `}
 `;
-
-Text.defaultProps = {
-  zIndex: 4,
-};

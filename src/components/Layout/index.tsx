@@ -18,7 +18,7 @@ const Wrapper = styled(Box)`
 width: 100%;
 min-height: 100vh;
 justify-content: center;
-background: linear-gradient(0deg, rgba(8,255,57,1) 0%, rgba(25,25,126,0.029983108108108114) 50%, rgba(0,179,255,1) 100%);
+background: linear-gradient(0deg,rgb(79 147 0 / 57%) 0%,rgb(228 171 74) 50%,rgb(96 169 255 / 59%) 100%);;
 `;
 
 const Content = styled(Box)`

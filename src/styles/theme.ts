@@ -6,6 +6,7 @@ export const theme = {
         gray: '#9f9f9f',
         curiousBlue: '#2E9CDB',
         bunting: '#131C44',
+        black: '#000',
     },
     breakPoints: {
         mobileS: '320px',

@@ -20,7 +20,7 @@ function* weatherSaga(action: { type: string, params: { [key: string]: string } 
         const historyItem = selectedCountry.map((item: DayProps) => {
             return {
                 city: data.city.name,
-                date: moment().format('LLL'),
+                date: moment().format('YYYY-MM-DD hh:mm:ss'),
                 temp: item.main.temp,
                 description: item.weather[0].description,
             };

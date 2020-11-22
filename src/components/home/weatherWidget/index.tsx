@@ -106,9 +106,12 @@ const ResultBox = styled(Box)`
 align-items: center;
 margin-top: 16px;
 flex-wrap: wrap;
+padding: 20px;
+background: #ffffff69;
+border-radius: 8px;
 justify-content: space-between;
     ${theme.down(theme.breakPoints.laptop)} {
-    justify-content: center;
+      justify-content: center;
   }
 `;
 

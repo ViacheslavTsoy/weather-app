@@ -167,39 +167,3 @@ const baseOptions: StyleObject = {
 export const BaseSelectStyles: StyleObject = {
     ...baseOptions,
 };
-
-export const SelectFontSize14: StyleObject = {
-    ...baseOptions,
-    placeholder: provided => ({
-        ...provided,
-        fontSize: '14px',
-        color: '#898DA1',
-        fontFamily: 'Inter, sans-serif',
-        fontWeight: 500,
-    }),
-    singleValue: provided => {
-        return {
-            ...provided,
-            fontSize: '14px',
-            color: '#373C43',
-            display: 'flex',
-            alignItems: 'center',
-            fontFamily: 'ArialMT, sans-serif',
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            lineHeight: '18px',
-        };
-    },
-    valueContainer: provided => {
-        return {
-            ...provided,
-            paddingLeft: '15px',
-            fontSize: '14px',
-            color: '#373C43',
-            fontFamily: 'ArialMT, sans-serif',
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            lineHeight: '18px',
-        };
-    },
-};

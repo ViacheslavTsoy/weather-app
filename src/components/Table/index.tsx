@@ -49,10 +49,17 @@ box-shadow: none !important;
 .ReactTable .rt-tbody .rt-td {
 border-right: 0;
 }
+.ReactTable .rt-noData {
+background: transparent;
+color: ${theme.colors.black}
+}
+.ReactTable .-pagination .-btn {
+color: ${theme.colors.black}
+}
 .ReactTable {
 width: 100%;
 padding: 29px 17px;
-background: ${theme.colors.white};
+background: #ffffff47;
 -webkit-border-radius: 4px;
 -moz-border-radius: 4px;
 border-radius: 4px;
@@ -65,7 +72,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 12px;
 line-height: 15px;
-color: ${theme.colors.blue};
+color: ${theme.colors.black};
     .rt-tr {
     background: rgba(243, 243, 243, 0.4);
     align-items: center;
@@ -89,7 +96,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 14px;
 line-height: 17px;
-color: ${theme.colors.blue};
+color: ${theme.colors.black};
 }
 padding-left: 17px;
 ::-webkit-scrollbar {
