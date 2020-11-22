@@ -13,8 +13,8 @@ export const LanguageSelect: React.FC = React.memo(() => {
     };
     return (
         <Wrapper>
-            <LangButton onClick={() => changeLang('ru')} active={active === 'ru'}>RU</LangButton>
-            <LangButton onClick={() => changeLang('en')} active={active === 'en'}>EN</LangButton>
+            <LangButton onClick={() => changeLang('ru')} active={active.includes('ru')}>RU</LangButton>
+            <LangButton onClick={() => changeLang('en')} active={active.includes('en')}>EN</LangButton>
         </Wrapper>
     );
 });
